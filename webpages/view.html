@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>BootCamp</title>
+    <style>
+        body {
+            background-color: #2D2D2D;
+        }
+
+        h1 {
+            text-align: center;
+            color: #C26356;
+            font-size: 24px;
+            font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+        }
+
+        .total {
+            position: relative;
+            height: 100%;
+        }
+
+        table {
+            padding-left: 16px;
+            padding-right: 16px;
+            margin: 0px auto;
+            border: 1px solid cornflowerblue;
+            border-collapse: collapse;
+            font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+        }
+
+        th {
+            text-align: center;
+            color: #C26356;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid cornflowerblue;
+            border-collapse: collapse;
+            font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+        }
+
+        td {
+            text-align: center;
+            padding: 4px 8px;
+            color: #C26356;
+            font-size: 14px;
+            border: 1px solid cornflowerblue;
+            border-collapse: collapse;
+            font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+        }
+
+
+        .container {
+            width: 200px;
+            height: 50px;
+            margin: 0px auto;
+            position: relative;
+            padding-bottom: 16px;
+            padding-top: 16px;
+        }
+
+
+        .button {
+            background-color: #008CBA;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1> BITCOIN ADDRESS</h1>
+<div class=total>
+    <table>
+        <tr>
+            <th>Address</th>
+            <th>PrivateKey</th>
+            <th>Balance</th>
+        </tr>
+        {{range .}}
+        <tr>
+            <td>{{.Address}}</td>
+            <td>{{.PrivateKey}}</td>
+            <td>{{.Balance}}</td>
+        </tr>
+        {{end}}
+    </table>
+    <div class="container">
+        <form action="/" method="get">
+            <button class="button">Random Data</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
+
